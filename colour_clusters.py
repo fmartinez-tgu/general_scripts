@@ -12,9 +12,9 @@ color = '#%02X%02X%02X' % (r(),r(),r()) # Genera un color en formato hexadecimal
 cluster_file = sys.argv[1]
 output_name = sys.argv[2]
 
-with open(output_name,"w+") as resultado:
+with open("{0}.txt".format(output_name),"w+") as resultado:
     
-    resultado.write("DATASET_COLORSTRIP\nSEPARATOR COMMA\nDATASET_LABEL,etiqueta\nCOLOR_BRANCHES,1\nDATA\n")
+    resultado.write("DATASET_COLORSTRIP\nSEPARATOR COMMA\nDATASET_LABEL,{0}\nCOLOR_BRANCHES,0\nDATA\n".format(output_name))
     
     with open(cluster_file,"r+") as fichero:
         
